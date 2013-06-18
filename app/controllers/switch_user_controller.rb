@@ -2,6 +2,7 @@ class SwitchUserController < ApplicationController
   before_filter :developer_modes_only
 
   def set_current_user
+    session.delete(:order_id)
     provider.remember_current_user(true)
     handle_request(params)
 
