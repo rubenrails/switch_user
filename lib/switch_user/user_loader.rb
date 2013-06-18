@@ -35,7 +35,7 @@ module SwitchUser
     end
 
     def user_class
-      scope.classify.constantize
+      Spree::User
     end
 
     def column_name
